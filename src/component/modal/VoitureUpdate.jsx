@@ -162,70 +162,71 @@ const ModalUpdateVoitures = () => {
 
 
   return (
-    <div className='container m-16 text-left' style={{width: '600px'}}>
-
-                    <div className='container container-sm'>
-                        <form>
-                            <div className="form-group mb-2">
-                                <label className='align-left' htmlFor="title">Titre de l'annonce</label>
+     
+                <form className='w-full max-w-lg'>
+                    <div className='flex flex-wrap -mx-3 mb-6'>
+                            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label htmlFor="title">Titre de l'annonce</label>
                                 <input type="text" required className="form-control" id="title" name="title" value={voiture.title} placeholder="Titre de l'annonce" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
-                                <label className='text-left' htmlFor="desc">Option</label>
+                            <div className="w-full md:w-1/2 px-3">
+                                <label htmlFor="desc">Option</label>
                                 <textarea id="desc" required name="description" rows="5" cols="33" className="form-control" value={voiture.description} placeholder="Option de l'annonce" onChange={changeHandler}/>
                             </div>
-
-                            <div className="form-group mb-2">
-                                <label className='text-left' htmlFor="price">Prix</label>
+                    </div>
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label htmlFor="price">Prix</label>
                                 <input type="number" required className="form-control" id="price" name="price" value={voiture.price} placeholder="Prix de l'annonce" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
-                                <label className='text-left' htmlFor="kilo">Kilomètres</label>
+                            <div className="w-full md:w-1/2 px-3">
+                                <label htmlFor="kilo">Kilomètres</label>
                                 <input type="number" required className="form-control" id="kilo" name="kilometers" value={voiture.kilometers} placeholder="Kilométrage de la voiture" onChange={changeHandler}/>
                             </div>
+                    </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="chevaux">Nombre de chevaux</label>
                                 <input type="number" required className="form-control" id="chevaux" name='chevaux' value={voiture.chevaux} placeholder="Nombre de chevaux" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="capacityR">Capacité reservoir (en litre)</label>
                                 <input type="number" required className="form-control" id="capacityR" name='capacityR' value={voiture.capacityR} placeholder="Capacité du reservoir" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="puissance">Puissance moteur (en Nw)</label>
                                 <input type="number" required className="form-control" id="puissance" name='puissance' value={voiture.puissance} placeholder="Puissance moteur" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="nbPorte">Nombre de porte</label>
                                 <input type="number" required className="form-control" id="nbPorte" name='nbPorte' value={voiture.nbPorte} placeholder="Nombre de porte" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="nbPlace">Nombre de place</label>
                                 <input type="number" required className="form-control" id="nbPlace" name='nbPlace' value={voiture.nbPlace} placeholder="Nombre de place" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="couleurExt">Couleur extérieur</label>
                                 <input type="text" required className="form-control" id="couleurExt" name="couleurExt" value={voiture.couleurExt} placeholder="Couleur extérieur" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="couleurInt">Couleur intérieur</label>
                                 <input type="text" required className="form-control" id="couleurInt" name="couleurInt" value={voiture.couleurInt} placeholder="Couleur intérieur" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="matSiege">Matière sièges</label>
                                 <input type="text" required className="form-control" id="matSiege" name="matSiege" value={voiture.matSiege} placeholder="Matière des sièges" onChange={changeHandler}/>
                             </div>
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label htmlFor="dispo">Disponibilité</label>
                                 <select required className="form-select" aria-label="Disponibilité" value={voiture.dispo} name="dispo" id="dispo" onChange={changeHandler}>
                                     <option value={null}>Disponibilité</option>
@@ -235,7 +236,7 @@ const ModalUpdateVoitures = () => {
                                 </select>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="etat">Etat de la voiture</label>
                                 <select required className="form-select" aria-label="Etat de la voiture" value={voiture.etat} name="etat" id="etat" onChange={changeHandler}>
                                     <option value={null}>Etat</option>
@@ -244,7 +245,7 @@ const ModalUpdateVoitures = () => {
                                 </select>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="energie">Ressource énergie</label>
                                 <select required className="form-select" aria-label="Type d'énérgie" name="energie" value={voiture.energie} id="energie" onChange={changeHandler}>
                                     <option value={null}>Ressource énergie</option>
@@ -254,7 +255,7 @@ const ModalUpdateVoitures = () => {
                                     <option value={'Hybride'}>Hybride</option>
                                 </select>
                             </div>
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="automatique">Automatique/Manuel</label>
                                 <div className="form-check form-switch">
                                     <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Automatique</label>
@@ -262,7 +263,7 @@ const ModalUpdateVoitures = () => {
                                 </div>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="marque">Marque</label>
                                 <select required className="form-select" aria-label="Marque" checked={voiture.automatique} name="marque" id="marque" value={voiture.marque} onChange={(e) => {changeHandler(e); getByName(e)}}>
                                     <option value={null}>Marque</option>
@@ -275,7 +276,7 @@ const ModalUpdateVoitures = () => {
                                 </select>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="model">Modèle</label>
                                 <select required className="form-select" aria-label="Modèle" name="model" value={voiture.model} id="model" onChange={changeHandler}>
                                     <option value={null}>Modèle</option>
@@ -289,17 +290,17 @@ const ModalUpdateVoitures = () => {
 
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="date">Date de la voiture</label>
                                 <input required type="month" className="form-control" id="date" name="date" value={voiture.date} placeholder="Date" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-2">
+                            <div className=" mb-2">
                                 <label className='text-left' htmlFor="reference">Référence</label>
                                 <input required type="text" className="form-control" id="reference" name="reference" value={voiture.reference} placeholder="Référence" onChange={changeHandler}/>
                             </div>
 
-                            <div className="form-group mb-3">
+                            <div className=" mb-3">
                                 <label className='text-left'>Photos</label>
 
                                 <div className='input-group'>
@@ -330,13 +331,10 @@ const ModalUpdateVoitures = () => {
                                     url={newUrl} />      
                                 
                                 <Button className="btn-success" onClick={() => {submitVoiture()}}>Enregistrer</Button>                                                                   
-                        </form>
+                   
+                </form>
 
-                    </div>
-
-        
-    </div>
-
+           
   )
 }
 

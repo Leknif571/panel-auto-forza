@@ -100,7 +100,7 @@ const VoiturePanel = () => {
                     
                         <div className="card-body">
                             <h5 className="card-title">{v.title}</h5>
-                            <p className="card-text">Prix : {v.price} // Référence : {v.reference}</p>
+                            <p className="card-text">Prix : {v.price} € // Référence : {v.reference}</p>
                         
                             <div>
                                 <a href={"/voiture-update/"+v.id} className="btn btn-success mx-2">Modifier</a>
